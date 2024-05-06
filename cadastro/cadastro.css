@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+
+@font-face {
+    font-family: Chloe;
+    src: url('./fonte/Chloe-Regular.otf');
+}
+
+body {
+    background-color: #560216;
+    background-image: url('../imagens/fundo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -155px;
+    font-family: "Baloo 2", sans-serif;
+
+
+}
+
+.box {
+    background-color: #fef3ea;
+    display: flex;
+    width: 500px;
+    height: 600px;
+    border-radius: 40px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+
+}
+
+.fundo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 55px;
+
+}
+
+.box-titulo {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    width: 80%;
+    position: relative;
+    left: 10px;
+
+
+}
+
+.box-titulo h2 {
+    color: #bc1823;
+    font-size: 60px;
+    line-height: 50px;
+    position: relative;
+    bottom: 10px;
+    font-family: Chloe;
+    font-weight: lighter;
+}
+
+.inputs {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Baloo 2';
+    font-size: large;
+    position: relative;
+    bottom: 25px;
+
+
+}
+
+.inputs input {
+    width: 370px;
+    height: 40px;
+    border-radius: 40px;
+    border: none;
+    box-shadow: 2px 2px 2px 1px rgba(2, 33, 53, 0.2);
+
+}
+
+.inputs input::placeholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px; 
+    color: #999; 
+}
+
+.inputs input:focus {
+    outline: none;
+}
+
+.inputs span {
+    font-size: 20px;
+    font-weight: 600;
+    color: #022135;
+}
+
+.inputs button {
+    background-color: #560216;
+    border-radius: 40px;
+    border: none;
+    font-size: 20px;
+    font-family: 'Baloo 2';
+    font-weight: 600;
+    color: #fef3ea;
+    width: 150px;
+    height: 50px;
+    position: relative;
+    top: 20px;
+}
+
+.inputs button:hover {
+    color: #dde9f1;
+    transition: 1s;
+    background-color: #022135;
+}
+
+.inputs p {
+    color: #bc1823;
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+    top: 25px;
+}
+
+.inputs a {
+    color: #bc1823;
+    text-decoration: none;
+}
+
+.inputs a:hover {
+    color: #560216;
+    transition: 0.8s;
+}
+
+.imagem-folha {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 7px;
+
+}
+
+.home {
+    color: #bc1823;
+    font-family: 'Baloo 2';
+    position: relative;
+    bottom: 7px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.home:hover {
+    color: #560216;
+    transition: 0.8s;
+}
