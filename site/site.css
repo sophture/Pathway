@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
+@font-face {
+    font-family: Chloe;
+    src: url('./fonte/Chloe-Regular.otf');
+}
+
+.patua-one-regular {
+    font-family: "Patua One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+* {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+.container1 {
+    display: flex;
+    background-image: url(./img/header.png);
+    width: 100%;
+    height: 1000px;
+    z-index: -1;
+    justify-content: center;
+    background-position-x: -290px ;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    background-color: transparent;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+
+}
+
+.logo {
+    width: 300px;
+    height: 60px;
+
+}
+
+.titulo-home h1 {
+    font-family: Chloe;
+    font-size: 150px;
+    color: rgba(221, 233, 241, 0.5);
+    margin-left: 400px;
+    margin-bottom: 100px;
+}
+
+.nav-bar {
+    background-color: rgba(221, 233, 241, 0.57);
+    position: absolute;
+    width: 900px;
+    height: 50px;
+    border-radius: 30px;
+    left: 600px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+
+
+}
+
+.nav-list a {
+    letter-spacing: 1px;
+    color: #FEF3EA;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 20px;
+    list-style-type: none;
+    font-family: 'Baloo 2';
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+    margin-right: 32px;
+    display: flex;
+    align-items: center;
+   
+}
+
+.nav-button {
+    background-color: #560216;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    font-family: 'Baloo 2';
+    font-weight: 600;
+    color: #fef3ea;
+    width: 130px;
+    height: 40px;
+}
+
+.visto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.titulo {
+    top: 100px;
+    font-size: 96px;
+    font-family: Chloe; 
+    color: #022135;
+}
+
+.imagem-folha {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    top: 20px;
+}
+
+.boxes{
+    margin-left: 13.5rem;
+    margin-right: 13.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+
+} 
+
+.card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #022135;
+    width: 400px;
+    height: 550px;
+    position: relative;
+    top: 150px;
+    margin: 15px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+
+  
+}
+
+.circulo {
+    background-color: rgba(221, 233, 241, 0.57);
+    width: 250px;
+    height: 250px;
+    border-radius: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 140px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+
+}
+
+.circulo img {
+    width: 169px;
+    height: 169px;
+}
+
+.card p{
+    font-family: 'Baloo 2';
+    font-size: 36px;
+    color: #FEF3EA;
+    position: relative;
+    bottom: 130px;
+
+}
+
+.card span {
+    font-family: 'Baloo 2';
+    font-size: 24px;
+    color: #FEF3EA;
+    margin: 10px;
+    position: relative;
+    bottom: 100px;
+    text-align: center;
+}
+
+.container2 {
+    display: flex;
+    width: 100%;
+    height: 1000px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container3 {
+    display: flex;
+    width: 100%;
+    height: 1000px;
+    flex-direction: column;
+    align-items: center;
+    background-color: #560216;
+}
+
+.titulo-c3 {
+    top: 100px;
+    font-size: 96px;
+    font-family: Chloe; 
+    color: #FEF3EA;
+    margin-bottom: 25px;
+}
+
+.box-c3 {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+
+}
+
+.imagem-c3 {
+    height: 620px;
+    width: 600px;
+    position: relative;
+    top: 30px;
+
+}
+
+.texto-c3 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+}
+
+.subtitulo h1 {
+    color: #FEF3EA;
+    font-family: "Patua One", serif;
+    font-size: 80px;
+    
+}
+
+.subtitulo span {
+    color: #FEF3EA;
+    font-family: 'Baloo 2';
+    font-size: 22px;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 50px;
+
+}
+
+.info div {
+    width: 140px;
+    margin-right: 50px;
+}
+
+.info p {
+    font-family: "Patua One", serif;
+    font-size: 24px;
+    color: rgb(221, 233, 241);
+
+}
+
+.info span {
+    font-family: "Patua One", serif;
+    color: rgba(221, 233, 241, 0.57);
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.salario {
+    font-size: 100px;
+}
+
+.proximo {
+    width: 44px;
+    height: 77.34px;
+}
