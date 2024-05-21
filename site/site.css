@@ -80,7 +80,7 @@ header {
     color: #FEF3EA;
     text-decoration: none;
     transition: 0.3s;
-    font-size: 20px;
+    font-size: 18px;
     list-style-type: none;
     font-family: 'Baloo 2';
 }
@@ -397,6 +397,100 @@ header {
     background-color: #022135;
 }
 
+.box-c4-b {
+    background-color: #DDE9F1;
+    width: 800px;
+    height: 550px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 30px;
+}
+
+.box-l {
+    width: 50%;
+    height: 550px;
+    background-color: #DDE9F1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 30px;
+    font-family: 'Baloo 2', serif;
+    font-size: 24px;
+    color: #022135;
+}
+
+.box-l p {
+    color: #BC1823;
+    font-size: 27px;
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 10px;
+
+}
+
+.box-l .resultado {
+    height: 40px;
+    width: 80%;
+    background-color: #FEF3EA;
+    border-radius: 30px;
+    margin-bottom: 5px;
+}
+
+.box-l small {
+    text-align: center;
+    font-size: 14px;
+    color: rgba(2, 33, 53, 0.5);
+    width: 250px;
+}
+
+.box-r {
+    width: 50%;
+    height: 550px;
+    background-color: #022135;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 30px;
+    font-family: 'Baloo 2', serif;
+    font-size: 24px;
+    color: #DDE9F1;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+.box-r b {
+    font-size: 30px;
+}
+
+
+.box-r p {
+    color: #BC1823;
+    font-weight: 600;
+    font-size: 35px;
+}
+
+.box-r span {
+    text-align: center;
+    font-size: 25px;
+    width: 300px;
+}
+
+.box-r button {
+    background-color: #BC1823;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    font-family: 'Baloo 2';
+    font-weight: 600;
+    color: #fef3ea;
+    width: 150px;
+    height: 50px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
 .container5 {
     display: flex;
     width: 100%;
@@ -431,14 +525,28 @@ header {
 }
 
  .card-c5 {
-    width: 400px;
+    width: 350px;
     height: 500px;
     background-color: #FEF3EA;
     border-radius: 30px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+    transition: 1s;
+}
 
+.card-c5:hover {
+    transform: scale(1.1);
+}
 
+.card-c5 p {
+    font-size: 35px;
+    font-family: 'Baloo 2', serif;
+    color: #560216;
+    font-weight: 700;
+    text-align: center;
 }
 
 .container5 button {
@@ -456,4 +564,7 @@ header {
 .box-c5 img {
     width: 200px;
     height: 200px;
+    margin-top: 30px;
+    margin-bottom: 70px;
+
 }
