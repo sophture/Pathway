@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cadastro.css">
-    <link rel="shortcut icon" type="imagex/png" href="../img/aba.ico">
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="shortcut icon" type="imagex/png" href="./assets/img/aba.ico">
+    <script src="./js/cadastro.js"></script>
     <title>PATHWAY | Cadastre-se</title>
 </head>
 
@@ -18,17 +19,17 @@
                 </h2>
             </div>
             <div class="inputs">
-                <input id="input_email" type="text" placeholder="Nome Completo">
+                <input id="input_nome" type="text" placeholder="Nome Completo">
                 <br>
-                <input type="text" placeholder="E-mail">
+                <input type="text" id="input_email" placeholder="E-mail">
                 <br>
-                <input type="text" placeholder="Senha">
+                <input type="text"id='input_senha' placeholder="Senha">
                 <br>
                 <input type="text" placeholder="Confirmação de Senha">
-                <button onclick="entrar()">Cadastrar</button>
+                <button onclick="cadastrar()">Cadastrar</button>
             </div>
-          <img class="imagem-folha" src="../img/logo-folha.png">
-          <a href="../index.html" class="home">Home</a>
+          <img class="imagem-folha" src="./assets/img/logo-folha.png">
+          <a href="./index.html" class="home">Home</a>
         </div>
     </div>
 </body>

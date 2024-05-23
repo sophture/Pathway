@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: Chloe;
-    src: url('./fonte/Chloe-Regular.otf');
+    src: url('../assets/fonte/Chloe-Regular.otf');
 }
 
 body {
     background-color: #560216;
-    background-image: url('../img/fundo.png');
+    background-image: url('../assets/img/fundo.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: -155px;

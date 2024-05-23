@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="./css/site.css">
     <script src="https://kit.fontawesome.com/1f12696c43.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" type="imagex/png" href="./img/aba.ico">
+    <link rel="shortcut icon" type="imagex/png" href="./assets/img/aba.ico">
     <title>Pathway: Home</title>
 
 </head>
@@ -14,14 +14,14 @@
 <body>
     <div class="container1">
         <header>
-            <img class="logo" src="../img/logo.png" alt="">
+            <img class="logo" src="./assets/img/logo.png" alt="">
             <div class="nav-bar">
                 <ul class="nav-list">
                     <li><a href="#scroll_2">Visto</a></li>
                     <li><a href="#scroll_3">Oportunidades</a></li>
                     <li><a href="#scroll_4">Custo de Vida</a></li>
                     <li><a href="#scroll_5">Acesso Exclusivo</a></li>
-                    <button class="nav-button" href="../login/tela-login.html">Entrar</a></button>
+                    <a href="./tela-login.html"><button class="nav-button">Entrar</button></a>
                 </ul>
             </div>
         </header>
@@ -33,24 +33,24 @@
     </div>
     </div>
     <div class="container2" id="scroll_2">
-        <img class="imagem-folha" src="../img/logo-folha.png">
+        <img class="imagem-folha" src="./assets/img/logo-folha.png">
         <h1 class="titulo">Processo de Visto</h1>
 
         <div class="boxes">
             <div class="card">
-                <div class="circulo"><img src="../img/passaporte.png" alt="">
+                <div class="circulo"><img src="./assets/img/passaporte.png" alt="">
                 </div>
                 <p>Passaporte</p>
                 <span>O passaporte é o seu documento de identificação internacional e é essencial para viajar para o Canadá. Certifique-se de que o seu passaporte esteja válido por pelo menos seis meses além da sua data de retorno planejada.</span>
             </div>
             <div class="card">
-                <div class="circulo"><img src="../img/estudando.png" alt="">
+                <div class="circulo"><img src="./assets/img/estudando.png" alt="">
                 </div>
                 <p>Estudo + Trabalho</p>
                 <span>O Canadá oferece diversas oportunidades para estudantes internacionais que desejam trabalhar enquanto estudam. Isso pode ajudar a cobrir os custos de vida e proporcionar uma experiência profissional valiosa.</span>
             </div>
             <div class="card">
-                <div class="circulo"><img src="../img/permissao.png" alt="">
+                <div class="circulo"><img src="./assets/img/permissao.png" alt="">
                 </div>
                 <p>Permissões</p>
                 <span>Para estudar ou trabalhar no Canadá, você precisará das permissões adequadas, como visto de estudante ou autorização de trabalho. É crucial entender qual tipo de permissão você necessita e como obtê-la.</span>
@@ -59,9 +59,9 @@
     </div>
 
     <div class="container3" id="scroll_3">
-        <img class="imagem-folha" src="../img/logo-folha.png">
+        <img class="imagem-folha" src="./assets/img/logo-branco.png">
         <h1 class="titulo-c3">Oportunidades</h1>
-        <div class="box-c3"> <img class="imagem-c3" src="../img/caixa.png" alt="">
+        <div class="box-c3"> <img class="imagem-c3" src="./assets/img/caixa.png" alt="">
 
             <div class="texto-c3">
                 <div class="subtitulo">
@@ -91,7 +91,7 @@
         </div>
     </div>
     <div class="container4" id="scroll_4">
-        <img class="imagem-folha" src="../img/logo-folha.png">
+        <img class="imagem-folha" src="./assets/img/logo-folha.png">
         <h1 class="titulo">Custo de Vida
         </h1>
         <span class="subtitulo-c4">Calcule quanto você vai gastar na sua viagem!</span>
@@ -145,24 +145,25 @@
 
 
     <div class="container5" id="scroll_5">
-        <img class="imagem-folha" src="../img/logo-folha.png">
+        <img class="imagem-folha" src="./assets/img/logo-folha.png">
         <h1 class="titulo-c5">Acesso Exclusivo</h1>
         <span>Cadastre-se no nosso site e tenha acesso a conteúdos únicos</span>
         <div class="box-c5">
-            <div class="card-c5"><img src="../img/painel.png" alt="">
+            <div class="card-c5"><img src="./assets/img/painel.png" alt="">
                 <p>Dashboard</p>
             </div>
-            <div class="card-c5"><img src="../img/perguntas-frequentes.png" alt="">
+            <div class="card-c5"><img src="./assets/img/perguntas-frequentes.png" alt="">
                 <p>Quiz: Conhecendo o Canadá!</p>
             </div>
-            <div class="card-c5"><img src="../img/grupo.png" alt="">
+            <div class="card-c5"><img src="./assets/img/grupo.png" alt="">
                 <p>
                     Forúm com experiências
                 </p>
             </div>
 
         </div>
-        <button href="cadastro/tela-cadastro.html">Faça seu cadastro!</a></button>
+        <button href="./tela-cadastro.html">Faça seu cadastro!</a></button>
+       
 
     </div>
 
@@ -209,6 +210,6 @@
     }
 
     function irCadastro() {
-        window.location.href = "./cadastro/tela-cadastro.html"
+        window.location.href = "./tela-cadastro.html"
     }
 </script>
