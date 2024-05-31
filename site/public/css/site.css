@@ -109,6 +109,7 @@ header {
     color: #fef3ea;
     width: 130px;
     height: 40px;
+    cursor: pointer;
 }
 
 .visto {
@@ -388,6 +389,7 @@ header {
     width: 150px;
     height: 60px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 
 
@@ -432,6 +434,8 @@ header {
 }
 
 .box-l .resultado {
+    display: flex;
+    justify-content: center;
     height: 40px;
     width: 80%;
     background-color: #FEF3EA;
@@ -479,6 +483,7 @@ header {
 }
 
 .box-r button {
+    cursor: pointer;
     background-color: #BC1823;
     border-radius: 30px;
     border: none;
@@ -535,6 +540,8 @@ header {
     align-items: center;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
     transition: 1s;
+    line-height: 35px;
+    
 }
 
 .card-c5:hover {
@@ -559,6 +566,7 @@ header {
     color: #fef3ea;
     width: 450px;
     height: 80px;
+    cursor: pointer;
 }
 
 .box-c5 img {

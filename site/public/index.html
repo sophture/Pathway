@@ -21,7 +21,7 @@
                     <li><a href="#scroll_3">Oportunidades</a></li>
                     <li><a href="#scroll_4">Custo de Vida</a></li>
                     <li><a href="#scroll_5">Acesso Exclusivo</a></li>
-                    <a href="./tela-login.html"><button class="nav-button">Entrar</button></a>
+                    <button onclick="irLogin()" class="nav-button">Entrar</button>
                 </ul>
             </div>
         </header>
@@ -41,19 +41,25 @@
                 <div class="circulo"><img src="./assets/img/passaporte.png" alt="">
                 </div>
                 <p>Passaporte</p>
-                <span>O passaporte é o seu documento de identificação internacional e é essencial para viajar para o Canadá. Certifique-se de que o seu passaporte esteja válido por pelo menos seis meses além da sua data de retorno planejada.</span>
+                <span>O passaporte é o seu documento de identificação internacional e é essencial para viajar para o
+                    Canadá. Certifique-se de que o seu passaporte esteja válido por pelo menos seis meses além da sua
+                    data de retorno planejada.</span>
             </div>
             <div class="card">
                 <div class="circulo"><img src="./assets/img/estudando.png" alt="">
                 </div>
                 <p>Estudo + Trabalho</p>
-                <span>O Canadá oferece diversas oportunidades para estudantes internacionais que desejam trabalhar enquanto estudam. Isso pode ajudar a cobrir os custos de vida e proporcionar uma experiência profissional valiosa.</span>
+                <span>O Canadá oferece diversas oportunidades para estudantes internacionais que desejam trabalhar
+                    enquanto estudam. Isso pode ajudar a cobrir os custos de vida e proporcionar uma experiência
+                    profissional valiosa.</span>
             </div>
             <div class="card">
                 <div class="circulo"><img src="./assets/img/permissao.png" alt="">
                 </div>
                 <p>Permissões</p>
-                <span>Para estudar ou trabalhar no Canadá, você precisará das permissões adequadas, como visto de estudante ou autorização de trabalho. É crucial entender qual tipo de permissão você necessita e como obtê-la.</span>
+                <span>Para estudar ou trabalhar no Canadá, você precisará das permissões adequadas, como visto de
+                    estudante ou autorização de trabalho. É crucial entender qual tipo de permissão você necessita e
+                    como obtê-la.</span>
             </div>
         </div>
     </div>
@@ -66,7 +72,10 @@
             <div class="texto-c3">
                 <div class="subtitulo">
                     <h1>Caixa</h1>
-                    <span>O caixa é uma função fundamental em qualquer loja, incluindo as lojas da Caixa. A função do caixa envolve interagir com os clientes, processar transações e garantir que o dinheiro seja contabilizado corretamente. Abaixo, você encontrará mais informações sobre as responsabilidades e habilidades necessárias para desempenhar essa função.</span>
+                    <span>O caixa é uma função fundamental em qualquer loja, incluindo as lojas da Caixa. A função do
+                        caixa envolve interagir com os clientes, processar transações e garantir que o dinheiro seja
+                        contabilizado corretamente. Abaixo, você encontrará mais informações sobre as responsabilidades
+                        e habilidades necessárias para desempenhar essa função.</span>
                 </div>
                 <div class="info">
                     <div>
@@ -115,23 +124,23 @@
         </div>
         <div class="box-c4-b" id="tela2">
             <div class="box-l">
-                <p>Olá Felipe, <br>
+                <p id="resultado_nome"> <br>
                     Em <b>Toronto</b>, o custo de vida mensal é:</p>
                 <span>Aluguel</span>
-                <div class="resultado"></div>
+                <div id="resultado_aluguel" class="resultado"></div>
                 <span>Alimentação</span>
-                <div class="resultado"></div>
+                <div id="resultado_alimentacao" class="resultado"></div>
                 <span>Transporte</span>
-                <div class="resultado"></div>
+                <div id="resultado_transporte" class="resultado"></div>
                 <span>Entreterimento</span>
-                <div class="resultado"></div>
+                <div id="resultado_entreterimento" class="resultado"></div>
                 <br>
                 <small>Esse cálculo é feito com base nas informações do site EXPATISTAN</small>
             </div>
             <div class="box-r">
                 <b>Resumo do custo de vida</b>
-                <small>Estimativa para 1 pessoa em <b>X</b> meses</small>
-                <p>CA$3,585</p>
+                <small>Estimativa para 1 pessoa em <b id="resultado_meses">X</b> meses</small>
+                <p id="resultado_total"></p>
                 <br>
                 <span>Para obter mais detalhes dos gastos que você pode ter
                     mensalmente nessa e outras cidades</span>
@@ -149,7 +158,8 @@
         <span>Cadastre-se no nosso site e tenha acesso a conteúdos únicos</span>
         <div class="box-c5">
             <div class="card-c5"><img src="./assets/img/painel.png" alt="">
-                <p>Dashboard</p>
+                <p>Dashboard com <br>
+                Custo de Vida</p>
             </div>
             <div class="card-c5"><img src="./assets/img/perguntas-frequentes.png" alt="">
                 <p>Quiz: Conhecendo o Canadá!</p>
@@ -161,8 +171,8 @@
             </div>
 
         </div>
-        <button href="./tela-cadastro.html">Faça seu cadastro!</a></button>
-       
+        <button onclick="irCadastro()">Faça seu cadastro!</button>
+
 
     </div>
 
@@ -170,6 +180,7 @@
 
 <script>
     function calcular() {
+        const nome = input_nome.value;
         const cidadeSelecionada = select_cidades.value;
         const periodoSelecionado = Number(input_periodo.value);
         let alimentacao = 0;
@@ -202,13 +213,23 @@
             entreterimento = 200
         }
 
-        let valorTotal = alimentacao + moradia + transporte + entreterimento * periodoSelecionado
+        let valorTotal = alimentacao + moradia + transporte + entreterimento * periodoSelecionado.toFixed(2)
 
-
+        resultado_nome.innerHTML = `Olá, ${nome}`
+        resultado_aluguel.innerHTML = `${moradia}`
+        resultado_alimentacao.innerHTML = `${alimentacao}`
+        resultado_transporte.innerHTML = `${transporte}`
+        resultado_entreterimento.innerHTML = `${entreterimento}`
+        resultado_meses.innerHTML = `${periodoSelecionado}`
+        resultado_total.innerHTML = `CA$${valorTotal}`
 
     }
 
     function irCadastro() {
         window.location.href = "./tela-cadastro.html"
+    }
+
+    function irLogin(){
+        window.location.href = "./tela-login.html"
     }
 </script>
