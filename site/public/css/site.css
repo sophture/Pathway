@@ -10,8 +10,8 @@
     font-family: "Patua One", serif;
     font-weight: 400;
     font-style: normal;
-  }
-  
+}
+
 
 * {
     margin: 0;
@@ -25,7 +25,7 @@
     height: 1000px;
     z-index: -1;
     justify-content: center;
-    background-position-x: -290px ;
+    background-position-x: -290px;
     flex-direction: column;
     align-items: center;
 }
@@ -58,10 +58,10 @@ header {
 .nav-bar {
     background-color: rgba(221, 233, 241, 0.57);
     position: absolute;
-    width: 900px;
+    width: 980px;
     height: 50px;
     border-radius: 30px;
-    left: 600px;
+    left: 520px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
 
 }
@@ -96,7 +96,7 @@ header {
     margin-right: 32px;
     display: flex;
     align-items: center;
-   
+
 }
 
 .nav-button {
@@ -122,7 +122,7 @@ header {
 .titulo {
     top: 100px;
     font-size: 96px;
-    font-family: Chloe; 
+    font-family: Chloe;
     color: #022135;
 }
 
@@ -133,7 +133,7 @@ header {
     top: 20px;
 }
 
-.boxes{
+.boxes {
     margin-left: 13.5rem;
     margin-right: 13.5rem;
     display: flex;
@@ -141,7 +141,7 @@ header {
     justify-content: space-evenly;
     flex-direction: row;
 
-} 
+}
 
 .card {
     display: flex;
@@ -157,7 +157,7 @@ header {
     margin: 15px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
 
-  
+
 }
 
 .circulo {
@@ -179,7 +179,7 @@ header {
     height: 169px;
 }
 
-.card p{
+.card p {
     font-family: 'Baloo 2';
     font-size: 36px;
     color: #FEF3EA;
@@ -218,7 +218,7 @@ header {
 .titulo-c3 {
     top: 100px;
     font-size: 96px;
-    font-family: Chloe; 
+    font-family: Chloe;
     color: #FEF3EA;
     margin-bottom: 25px;
 }
@@ -248,7 +248,7 @@ header {
     color: #FEF3EA;
     font-family: "Patua One", serif;
     font-size: 80px;
-    
+
 }
 
 .subtitulo span {
@@ -509,7 +509,7 @@ header {
     color: #FEF3EA;
     top: 100px;
     font-size: 96px;
-    font-family: Chloe; 
+    font-family: Chloe;
     margin-bottom: 25px;
 }
 
@@ -526,10 +526,10 @@ header {
     align-items: center;
     width: 90%;
     height: 600px;
-   
+
 }
 
- .card-c5 {
+.card-c5 {
     width: 350px;
     height: 500px;
     background-color: #FEF3EA;
@@ -541,7 +541,7 @@ header {
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
     transition: 1s;
     line-height: 35px;
-    
+
 }
 
 .card-c5:hover {
@@ -575,4 +575,38 @@ header {
     margin-top: 30px;
     margin-bottom: 70px;
 
+}
+
+.container6 {
+    background-color: #dde9f1;
+    display: flex;
+    width: 100%;
+    height: 700px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-c6 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 1200px;
+    height: 500px;
+}
+
+.box-c6 img {
+    width: 350px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+    margin-right: 50px;
+}
+
+
+.box-c6 span {
+    font-family: 'Baloo 2', serif;
+    color: #560216;
+    font-weight: 600;
+    font-size: 23px;
 }

@@ -155,3 +155,22 @@ body {
     color: #560216;
     transition: 0.8s;
 }
+
+.inputs select{
+    width: 370px;
+    height: 40px;
+    border-radius: 40px;
+    border: none;
+    box-shadow: 2px 2px 2px 1px rgba(2, 33, 53, 0.2);
+    text-align: center;
+}
+
+.inputs option {
+    font-family: 'Baloo 2', serif;
+    font-size: 20px;
+    color: rgba(2, 33, 53, 0.5);
+    text-align: center;
+    border-radius: 80px;
+    background-color: #FEF3EA;
+
+}

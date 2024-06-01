@@ -2,6 +2,105 @@
 @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
 
 @font-face {
-    font-family: Chloe;
-    src: url('../assets/fonte/Chloe-Regular.otf');
+  font-family: Chloe;
+  src: url('./fonte/Chloe-Regular.otf');
+}
+
+body {
+  background-color: #dde9f1;
+}
+
+#nav-bar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 80px;
+  height: 100%;
+  background-color: #022135;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+
+}
+
+#nav-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-bar li {
+  text-align: center;
+  text-decoration: none;
+  border: transparent;
+}
+
+#nav-bar a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+#nav-bar img {
+  width: 30px;
+  height: 30px;
+}
+
+#nav-bar span {
+  font-family: Chloe;
+  color: #dde9f1;
+  font-size: 18px;
+  position: relative;
+  top: 80px;
+  text-align: center;
+}
+
+#nav-bar .botao {
+  position: relative;
+  top: 20px;
+  width: 80px;
+  height: 80px;
+}
+
+#nav-bar .logo {
+  position: relative;
+  bottom: 25px;
+  width: 80px;
+  height: 80px;
+}
+
+#nav-bar .nome {
+  width: 250px;
+  height: 50px;
+  background-color: #bc1823;
+  margin-left: 170px;
+  font-family: Chloe;
+  font-size: 30px;
+  position: relative;
+  bottom: 80px;
+  color: #FEF3EA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+
+}
+
+.conteudo {
+    max-height: 695px;
+    max-width: 1456px;
+    margin-left: 80px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box1 {
+    background-color: #FEF3EA;
+    width: 150px;
+    height: 50px;
 }
