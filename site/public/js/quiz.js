@@ -102,79 +102,87 @@ const questions = [
 ];
 
 const questionElement = document.getElementById("question");
-const answerButton = document.getElementById("answer-buttons");
-const nextButton = document.getElementById("next-bnt");
+const answerButtons = document.getElementById("answer-buttons");
+const nextButton = document.getElementById("next-btn");
 
 let currentQuestionIndex = 0;
 let score = 0;
 
-
-function startQuiz() {
+function startQuiz(){
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = "Next"
     showQuestion();
+
 }
 
-function showQuestion() {
+function showQuestion(){
     resetState();
-    let currentQuestion = questions[currentQuestionIndex];
-    let questionNo = currentQuestionIndex + 1;
-    questionElement.innerHTML = questionNo + ". " + currentQuestion.question
+    let currentQuestion = question[currentQuestionIndex];
+    let questionNO = currentQuestionIndex + 1;
+    questionElement.innerHTML = questionNO + ". " + currentQuestion.question;
 
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
         button.innerHTML = answer.text;
         button.classList.add("btn");
-        answerButton.appendChild(button);
-        if (answer.correct) {
-            button.dataset.corret = answer.correct;
+        answerButtons.appendChild(button);
+        if(answer.correct){
+            button.dataset.correct = answer.correct;
         }
-        button.addEventListener("click", selectAnswer)
+        button.addEventListener("click", selectAnswer);
     });
 }
 
-function resetState() {
-    nextButton.style.display = "none"
-    while (answerButton.firstChild) {
-        answerButton.removeChild(answerButton.firstChild);
 
+function resetState(){
+    nextButton.style.display = "none";
+    while(answerButtons.firstChild){
+        answerButtons.removeChild(answerButtons.firstChild);
     }
 }
 
-function selectAnswer(e) {
-    const selectedtBnt = e.target;
-    const isCorrect = selectedtBnt.dataset.correct == "true";
-    if (isCorrect) {
-        selectedtBnt.classList.add("correct")
-    } else {
-        selectedtBnt.classList.add("incorrect")
+function selectAnswer(e){
+    const selectedBtn = e.target;
+    const isCorrect = selectedBtn.dataset.correct === "true";
+    if(isCorrect){
+        selectedBtn.classList.add("correct");
+        score++
+    }else{
+        selectedBtn.classList.add("Incorrect");
     }
-    Array.from(answerButton.children).forEach(button => {
-        if (button.dataset.correct == "true") {
-            button.classList.add("correct")
-            score++;
+    Array.from(answerButtons.children).forEach(button => {
+        if(button.dataset.correct === "true"){
+            button.classList.add("correct");
         }
-        button.disable = true;
+        button.disabled = true;
     })
-    nextButton.style.display = "block"
+    nextButton.style.display = "block";
 }
 
-function handleNextButton() {
+function showScore(){
+    resetState();
+    questionElement.innerHTML = `<span style="display: flex; align-items: center; flex-direction: column; margin-top:100px; font-size:40px">Você pontuou ${score} de ${question.length}!</span>`;
+    nextButton.innerHTML = "Jogue novamente";
+    nextButton.style.display = "block";
+
+}
+
+function handleNextButton(){
     currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
-        showQuestion()
-    } else {
-        showScore()
+    if(currentQuestionIndex < question.length){
+        showQuestion();
+    }else{
+        showScore();
     }
 }
 
-// nextButton.addEventListener("click", () => {
-//     if(currentQuestionIndex < questions.length){
-//         handleNextButton()
-//     } else {
-
-//     }
-// })
+nextButton.addEventListener("click", () =>{
+    if(currentQuestionIndex < question.length){
+        handleNextButton();
+    }else{
+        startQuiz();
+    }
+})
 
 startQuiz();

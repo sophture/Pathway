@@ -68,135 +68,118 @@
     <div class="container3" id="scroll_3">
         <img class="imagem-folha" src="./assets/img/logo-branco.png">
         <h1 class="titulo-c3">Oportunidades</h1>
-        <div class="box-c3"> <img class="imagem-c3" src="./assets/img/caixa.png" alt="">
+        <div class="box-c3">
+            <div class="carousel">
+                <img class="carousel-image active" src="./assets/img/caixa.png" alt="Imagem 1">
+                <img class="carousel-image" src="./assets/img/server.png" alt="Imagem 2">
+                <img class="carousel-image" src="./assets/img/front.png" alt="Imagem 3">
+                <img class="carousel-image" src="./assets/img/baba.png" alt="Imagem 4">
+        
+                <button class="prev"> ❮ </button>
+                <button class="next"> ❯ </button>
+            </div>
+        </div>
+        <div class="container4" id="scroll_4">
+            <img class="imagem-folha" src="./assets/img/logo-folha.png">
+            <h1 class="titulo">Custo de Vida
+            </h1>
+            <span class="subtitulo-c4">Calcule quanto você vai gastar na sua viagem!</span>
 
-            <div class="texto-c3">
-                <div class="subtitulo">
-                    <h1>Caixa</h1>
-                    <span>O caixa é uma função fundamental em qualquer loja, incluindo as lojas da Caixa. A função do
-                        caixa envolve interagir com os clientes, processar transações e garantir que o dinheiro seja
-                        contabilizado corretamente. Abaixo, você encontrará mais informações sobre as responsabilidades
-                        e habilidades necessárias para desempenhar essa função.</span>
+            <br>
+            <div class="box-c4" id="tela1">
+                <input type="text" placeholder="Nome" class="input" id="input_nome">
+                <br>
+                <p>Cidade Escolhida:</p>
+                <select name="" id="select_cidades">
+                    <option value=""></option>
+                    <option value="toronto">Toronto</option>
+                    <option value="vancouver">Vancouver</option>
+                    <option value="montreal">Montreal</option>
+                    <option value="quebec">Quebéc</option>
+                </select>
+                <br>
+                <p>Período (em meses)</p>
+                <input id="input_periodo" type="number">
+                <br>
+                <button onclick="calcular()">Calcular</button>
+            </div>
+            <div class="box-c4-b" id="tela2">
+                <div class="box-l">
+                    <p id="resultado_nome"> <br>
+                        Em <b>Toronto</b>, o custo de vida mensal é:</p>
+                    <span>Aluguel</span>
+                    <div id="resultado_aluguel" class="resultado"></div>
+                    <span>Alimentação</span>
+                    <div id="resultado_alimentacao" class="resultado"></div>
+                    <span>Transporte</span>
+                    <div id="resultado_transporte" class="resultado"></div>
+                    <span>Entreterimento</span>
+                    <div id="resultado_entreterimento" class="resultado"></div>
+                    <br>
+                    <small>Esse cálculo é feito com base nas informações do site EXPATISTAN</small>
                 </div>
-                <div class="info">
-                    <div>
-                        <p>Àreas de atuação</p> <span>Fármacias,
-                            Cafés,
-                            Restaurantes,
-                            Lojas em geral.</span>
-                    </div>
-                    <div>
-                        <p>Salário Minímo:</p> <span class="salario">16,5$</span>
-                        <p>Horas Trabalhadas:</p> <span>Meio-período</span>
-                    </div>
-                    <div>
-                        <p>Principais características:</p> <span>Fármacias,
-                            Cafés,
-                            Restaurantes,
-                            Lojas em geral.</span>
-                    </div>
+                <div class="box-r">
+                    <b>Resumo do custo de vida</b>
+                    <small>Estimativa para 1 pessoa em <b id="resultado_meses">X</b> meses</small>
+                    <p id="resultado_total"></p>
+                    <br>
+                    <span>Para obter mais detalhes dos gastos que você pode ter
+                        mensalmente nessa e outras cidades</span>
+                    <br>
+                    <button onclick="irCadastro()">Cadastre-se</button>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container4" id="scroll_4">
-        <img class="imagem-folha" src="./assets/img/logo-folha.png">
-        <h1 class="titulo">Custo de Vida
-        </h1>
-        <span class="subtitulo-c4">Calcule quanto você vai gastar na sua viagem!</span>
-
         <br>
-        <div class="box-c4" id="tela1">
-            <input type="text" placeholder="Nome" class="input" id="input_nome">
-            <br>
-            <p>Cidade Escolhida:</p>
-            <select name="" id="select_cidades">
-                <option value=""></option>
-                <option value="toronto">Toronto</option>
-                <option value="vancouver">Vancouver</option>
-                <option value="montreal">Montreal</option>
-                <option value="quebec">Quebéc</option>
-            </select>
-            <br>
-            <p>Período (em meses)</p>
-            <input id="input_periodo" type="number">
-            <br>
-            <button onclick="calcular()">Calcular</button>
-        </div>
-        <div class="box-c4-b" id="tela2">
-            <div class="box-l">
-                <p id="resultado_nome"> <br>
-                    Em <b>Toronto</b>, o custo de vida mensal é:</p>
-                <span>Aluguel</span>
-                <div id="resultado_aluguel" class="resultado"></div>
-                <span>Alimentação</span>
-                <div id="resultado_alimentacao" class="resultado"></div>
-                <span>Transporte</span>
-                <div id="resultado_transporte" class="resultado"></div>
-                <span>Entreterimento</span>
-                <div id="resultado_entreterimento" class="resultado"></div>
-                <br>
-                <small>Esse cálculo é feito com base nas informações do site EXPATISTAN</small>
-            </div>
-            <div class="box-r">
-                <b>Resumo do custo de vida</b>
-                <small>Estimativa para 1 pessoa em <b id="resultado_meses">X</b> meses</small>
-                <p id="resultado_total"></p>
-                <br>
-                <span>Para obter mais detalhes dos gastos que você pode ter
-                    mensalmente nessa e outras cidades</span>
-                <br>
-                <button onclick="irCadastro()">Cadastre-se</button>
+        <br>
+        <br>
+        <div class="container6" id="scroll_6">
+            <img class="imagem-folha" src="./assets/img/logo-folha.png">
+            <h1 class="titulo">Alinhado com o ODS</h1>
+            <div class="box-c6">
+                <div>
+                    <img src="./assets/img/ods.jpg" alt="">
+                </div>
+                <div class="descricao">
+                    <span>Os Objetivos de Desenvolvimento, ou ODS, da ONU são uma coleção de <b>17 metas globais</b>,
+                        estabelecidas pela Assembleia Geral das Nações Unidas
+                        <br>
+                        <br>
+                        O programa de intercâmbio profissional visa atingir um objetivo da Agenda de 2030 da ONU.
+                        <br>
+                        O <b>ODS 8</b> tem o intuito de “promover o crescimento econômico inclusivo e sustentável,
+                        emprego pleno e produtivo e trabalho digno para todos”, algo que está diretamente relacionado
+                        com o propósito do intercâmbio profissional.
+                    </span>
+                </div>
             </div>
         </div>
-    </div>
+        <br>
+        <br><br>
+        <br>
+        <div class="container5" id="scroll_5">
+            <img class="imagem-folha" src="./assets/img/logo-folha.png">
+            <h1 class="titulo-c5">Acesso Exclusivo</h1>
+            <span>Cadastre-se no nosso site e tenha acesso a conteúdos únicos</span>
+            <div class="box-c5">
+                <div class="card-c5"><img src="./assets/img/painel.png" alt="">
+                    <p>Dashboard com <br>
+                        Custo de Vida</p>
+                </div>
+                <div class="card-c5"><img src="./assets/img/perguntas-frequentes.png" alt="">
+                    <p>Quiz: Conhecendo o Canadá!</p>
+                </div>
+                <div class="card-c5"><img src="./assets/img/grupo.png" alt="">
+                    <p>
+                        Forúm com experiências
+                    </p>
+                </div>
 
-    <div class="container6" id="scroll_6">
-        <img class="imagem-folha" src="./assets/img/logo-folha.png">
-        <h1 class="titulo">Alinhado com o ODS</h1>
-        <div class="box-c6">
-            <div>
-                <img src="./assets/img/ods.jpg" alt="">
             </div>
-            <div class="descricao">
-                <span>Os Objetivos de Desenvolvimento, ou ODS, da ONU são uma coleção de <b>17 metas globais</b>,
-                    estabelecidas pela Assembleia Geral das Nações Unidas
-                    <br>
-                    <br>
-                    O programa de intercâmbio profissional visa atingir um objetivo da Agenda de 2030 da ONU.
-                    <br>
-                    O <b>ODS 8</b> tem o intuito de “promover o crescimento econômico inclusivo e sustentável,
-                    emprego pleno e produtivo e trabalho digno para todos”, algo que está diretamente relacionado
-                    com o propósito do intercâmbio profissional.
-                </span>
-            </div>
-        </div>
-    </div>
-    <br>
-    <br>
-    <div class="container5" id="scroll_5">
-        <img class="imagem-folha" src="./assets/img/logo-folha.png">
-        <h1 class="titulo-c5">Acesso Exclusivo</h1>
-        <span>Cadastre-se no nosso site e tenha acesso a conteúdos únicos</span>
-        <div class="box-c5">
-            <div class="card-c5"><img src="./assets/img/painel.png" alt="">
-                <p>Dashboard com <br>
-                    Custo de Vida</p>
-            </div>
-            <div class="card-c5"><img src="./assets/img/perguntas-frequentes.png" alt="">
-                <p>Quiz: Conhecendo o Canadá!</p>
-            </div>
-            <div class="card-c5"><img src="./assets/img/grupo.png" alt="">
-                <p>
-                    Forúm com experiências
-                </p>
-            </div>
+            <button onclick="irCadastro()">Faça seu cadastro!</button>
+
 
         </div>
-        <button onclick="irCadastro()">Faça seu cadastro!</button>
-
-
-    </div>
 
 </body>
 
@@ -254,4 +237,8 @@
     function irLogin() {
         window.location.href = "./tela-login.html"
     }
+
+
 </script>
+
+<script src="./js/carrossel.js"></script>

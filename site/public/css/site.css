@@ -181,18 +181,16 @@ header {
 
 .card p {
     font-family: 'Baloo 2';
-    font-size: 36px;
+    font-size: 35px;
     color: #FEF3EA;
     position: relative;
     bottom: 130px;
-
 }
 
 .card span {
     font-family: 'Baloo 2';
     font-size: 24px;
     color: #FEF3EA;
-    margin: 10px;
     position: relative;
     bottom: 100px;
     text-align: center;
@@ -209,7 +207,7 @@ header {
 .container3 {
     display: flex;
     width: 100%;
-    height: 1000px;
+    height: 980px;
     flex-direction: column;
     align-items: center;
     background-color: #560216;
@@ -223,75 +221,52 @@ header {
     margin-bottom: 25px;
 }
 
-.box-c3 {
+.carrossel {
     display: flex;
-    flex-direction: row;
-    width: 80%;
-
-}
-
-.imagem-c3 {
-    height: 620px;
-    width: 600px;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    top: 30px;
-
+    width: 50%;
+    max-width: 100px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #560216;
 }
 
-.texto-c3 {
-    display: flex;
-    flex-direction: column;
-    margin-left: 40px;
+.carousel-image {
+    display: none;
+    width: 90%;
 }
 
-.subtitulo h1 {
-    color: #FEF3EA;
-    font-family: "Patua One", serif;
-    font-size: 80px;
-
+.carousel-image.active {
+    display: block;
 }
 
-.subtitulo span {
-    color: #FEF3EA;
-    font-family: 'Baloo 2';
-    font-size: 22px;
+.box-c3 button {
+    position: absolute;
+    transform: translateY(-600%);
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 50px;
 }
 
-.info {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    top: 50px;
-
+button.prev {
+    left: 10px;
 }
 
-.info div {
-    width: 140px;
-    margin-right: 50px;
+button.next {
+    right: 10px;
 }
 
-.info p {
-    font-family: 'Baloo 2', serif;
-    font-size: 24px;
-    color: rgb(221, 233, 241);
-
+button:focus {
+    outline: none;
 }
 
-.info span {
-    font-family: "Patua One", serif;
-    color: rgba(221, 233, 241, 0.57);
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.salario {
-    font-size: 100px;
-}
-
-.proximo {
-    width: 44px;
-    height: 77.34px;
-}
 
 .container3 i {
     transform: scale(3.0);
@@ -300,7 +275,7 @@ header {
 .container4 {
     display: flex;
     width: 100%;
-    height: 1000px;
+    height: 1020px;
     flex-direction: column;
     align-items: center;
 }
@@ -581,7 +556,7 @@ header {
     background-color: #dde9f1;
     display: flex;
     width: 100%;
-    height: 700px;
+    height: 650px;
     flex-direction: column;
     align-items: center;
 }

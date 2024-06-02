@@ -15,13 +15,13 @@
         <img class="logo" src="./assets/img/logo-folha.png" alt="">
         <div class="nome">Hello, Sophia</div>
         <ul>
-            <li><a href="#" class="nav-link"> <img src="./assets/img/casa.png" alt=""></a></li>
-            <li><a href="#" class="nav-link"> <img src="./assets/img/pergunta-para-fazer-login-em-circulos.png" alt=""
+            <li><a href="./dashboard.html" class="nav-link"> <img src="./assets/img/casa.png" alt=""></a></li>
+            <li><a href="./quiz.html" class="nav-link"> <img src="./assets/img/pergunta-para-fazer-login-em-circulos.png" alt=""
                         srcset=""></a></li>
-            <li><a href="#" class="nav-link"> <img src="./assets/img/avaliacao.png" alt=""></a></li>
+            <li><a href="./forum.html" class="nav-link"> <img src="./assets/img/avaliacao.png" alt=""></a></li>
         </ul>
         <span>See you!</span>
-        <img class="botao" src="./assets/img/calcular.png" alt="" onclick="sair()">
+        <img class="botao" src="./assets/img/calcular.png" alt="" onclick="irLogin()">
     </nav>
     <div class="conteudo">
         <h1 class="titulo">Quão bem você conhece o Canadá?</h1>
@@ -45,3 +45,8 @@
 <script src="./js/quiz.js"></script>
 
 </html>
+<script>
+    function irLogin() {
+          window.location.href = "./tela-login.html"
+      }
+  </script>
