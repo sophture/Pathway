@@ -6,6 +6,12 @@
   src: url('./fonte/Chloe-Regular.otf');
 }
 
+.patua-one-regular {
+  font-family: "Patua One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   background-color: #dde9f1;
 }
@@ -87,5 +93,83 @@ body {
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+}
 
+.conteudo {
+  max-height: 695px;
+  max-width: 1456px;
+  margin-left: 80px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.box {
+  background-color: #FEF3EA;
+  width: 900px;
+  height: 480px;
+  border-radius: 30px;
+  margin-top: 20px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  position: relative;
+  top: 90px;
+}
+
+.box h1 {
+  color: #022135;
+  font-family: "Patua One", serif;
+  font-size: 25px;
+  text-align: center;
+  position: relative;
+  bottom: 5px;
+}
+
+.indicadores {
+  background-color: #022135;
+  width: 200px;
+  height: 600px;
+  border-radius: 30px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  position: relative;
+  margin: 20px;
+  top: 35px;
+  right: 120px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.indicadores p {
+  color: #FEF3EA;
+  font-family: "Patua One", serif;
+  font-size: 25px;
+  text-align: center;
+
+}
+
+.img-indicadores {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  bottom: 28px;
+}
+
+.cidade-ind {
+  font-family: 'Baloo 2';
+  color: #dde9f1;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.num-ind {
+  font-family: 'Baloo 2';
+  color: #bc1823;
+  font-size: 35px;
+  font-weight: 600;
+  bottom: 30px;
 }

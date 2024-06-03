@@ -236,7 +236,7 @@ header {
 
 .carousel-image {
     display: none;
-    width: 90%;
+    width: 100%;
 }
 
 .carousel-image.active {
