@@ -91,17 +91,97 @@ body {
 }
 
 .conteudo {
-    max-height: 695px;
-    max-width: 1456px;
-    margin-left: 80px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+  max-height: 2000px;
+  max-width: 1456px;
+  margin-left: 80px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.conteudo h1 {
+  margin: 0;
+  font-family: Chloe;
+  margin-top: 100px;
+  font-size: 50px;
+  text-align: center;
+  color: #560216;
+  position: relative;
+  bottom: 40px;
 }
 
 .box1 {
-    background-color: #FEF3EA;
-    width: 150px;
-    height: 50px;
+  background-color: #FEF3EA;
+  width: 1000px;
+  height: 350px;
+  margin: 10px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  position: relative;
+  bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.box1 img {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+}
+
+.box1 p {
+  font-family: 'Baloo 2';
+  color: #022135;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.box2 {
+  background-color: #FEF3EA;
+  width: 1000px;
+  height: 150px;
+  margin: 10px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  position: relative;
+  bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.box2 p {
+  font-family: 'Baloo 2';
+  color: #022135;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 20px 20px 10px;
+}
+
+.box2 textarea {
+  width: 900px;
+  height: 150px;
+  background-color: #022135;
+  border: none;
+  margin: 0 auto 20px;
+  border-radius: 20px;
+  color: #FEF3EA;
+  padding: 10px;
+  resize: none;
+}
+
+.box2 textarea:focus {
+  border: 0px transparent;
+}
+
+.postar {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  bottom: 60px;
+  left: 480px;
+  cursor: pointer;
 }
