@@ -13,7 +13,7 @@
 <body>
     <nav id="nav-bar">
       <img class="logo" src="./assets/img/logo-folha.png" alt="">
-      <div class="nome">Hello, Sophia</div>
+      <div id="nomeUsuario" class="nome"></div>
         <ul>
           <li><a href="./dashboard.html" class="nav-link"> <img src="./assets/img/casa.png" alt=""></a></li>
             <li><a href="./quiz.html" class="nav-link"> <img src="./assets/img/pergunta-para-fazer-login-em-circulos.png" alt=""
@@ -49,4 +49,6 @@
   function irLogin() {
         window.location.href = "./tela-login.html"
     }
+
+    nomeUsuario.innerHTML = `Hello, ${sessionStorage.NOME_USUARIO}`
 </script>

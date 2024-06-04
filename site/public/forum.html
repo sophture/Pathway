@@ -13,7 +13,7 @@
 <body>
     <nav id="nav-bar">
       <img class="logo" src="./assets/img/logo-folha.png" alt="">
-      <div class="nome">Hello, Sophia</div>
+      <div id="nomeUsuario" class="nome"></div>
         <ul>
           <li><a href="./dashboard.html" class="nav-link"> <img src="./assets/img/casa.png" alt=""></a></li>
             <li><a href="./quiz.html" class="nav-link"> <img src="./assets/img/pergunta-para-fazer-login-em-circulos.png" alt=""
@@ -25,8 +25,8 @@
       </nav>
 
       <div class="conteudo">
-        <h1>Forúm dos Intercâmbistas</h1>
-       <div class="box1">
+        <h1>Fórum dos Intercâmbistas</h1>
+       <div class="box1" id="forum">
         <img class="img-indicadores" src="./assets/img/logo-folha.png" alt="">
         <p>Publicações</p>
        </div>
@@ -34,11 +34,13 @@
         <p>Novo Post</p>
         <textarea id="postText"></textarea>
        </div>
-       <img class="postar" src="./assets/img/proximo-quiz.png" alt="">
+       <img onclick="postar()" class="postar" src="./assets/img/proximo-quiz.png" alt="">
       </div>
 </body>
 
 </html>
+<script src="./js/forum.js"></script>
+
 <script>
   function irLogin() {
         window.location.href = "./tela-login.html"

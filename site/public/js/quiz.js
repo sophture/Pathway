@@ -3,7 +3,7 @@ const questions = [
         question: "Onde está localizado o Canadá?",
         answers: [
 
-            { text: "América Anglo-Saxônica", correct: true },
+            { text: "América do Norte", correct: true },
             { text: "Europa", correct: false },
             { text: "América Central", correct: false },
             { text: "América do Sul", correct: false }
@@ -101,88 +101,104 @@ const questions = [
     }
 ];
 
-const questionElement = document.getElementById("question");
-const answerButtons = document.getElementById("answer-buttons");
-const nextButton = document.getElementById("next-btn");
-
+const questionElement = document.getElementById('question');
+const answerButtons = document.getElementById('answer-buttons');
+const nextButton = document.getElementById('next-btn');
 let currentQuestionIndex = 0;
 let score = 0;
 
-function startQuiz(){
+function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
-    nextButton.innerHTML = "Next"
+    nextButton.style.display = 'none';
     showQuestion();
-
 }
 
-function showQuestion(){
+function showQuestion() {
     resetState();
-    let currentQuestion = question[currentQuestionIndex];
-    let questionNO = currentQuestionIndex + 1;
-    questionElement.innerHTML = questionNO + ". " + currentQuestion.question;
+    const currentQuestion = questions[currentQuestionIndex];
+    questionElement.textContent = currentQuestion.question;
 
     currentQuestion.answers.forEach(answer => {
-        const button = document.createElement("button");
-        button.innerHTML = answer.text;
-        button.classList.add("btn");
-        answerButtons.appendChild(button);
-        if(answer.correct){
+        const button = document.createElement('button');
+        button.textContent = answer.text;
+        button.classList.add('resposta');
+        if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
-        button.addEventListener("click", selectAnswer);
+        button.addEventListener('click', selectAnswer);
+        answerButtons.appendChild(button);
     });
 }
 
-
-function resetState(){
-    nextButton.style.display = "none";
-    while(answerButtons.firstChild){
+function resetState() {
+    nextButton.style.display = 'none';
+    while (answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
     }
+
 }
 
-function selectAnswer(e){
+function selectAnswer(e) {
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === "true";
-    if(isCorrect){
+    if (isCorrect) {
         selectedBtn.classList.add("correct");
-        score++
-    }else{
-        selectedBtn.classList.add("Incorrect");
+        score++;
+    } else {
+        selectedBtn.classList.add("incorrect");
     }
     Array.from(answerButtons.children).forEach(button => {
-        if(button.dataset.correct === "true"){
+        if (button.dataset.correct === "true") {
             button.classList.add("correct");
         }
         button.disabled = true;
-    })
-    nextButton.style.display = "block";
+    });
+    nextButton.style.display = 'block';
 }
 
-function showScore(){
+function showScore() {
     resetState();
-    questionElement.innerHTML = `<span style="display: flex; align-items: center; flex-direction: column; margin-top:100px; font-size:40px">Você pontuou ${score} de ${question.length}!</span>`;
-    nextButton.innerHTML = "Jogue novamente";
-    nextButton.style.display = "block";
-
+    questionElement.textContent = `Você marcou ${score} de ${questions.length}!`;
+    nextButton.textContent = 'Jogar Novamente';
+    nextButton.style.display = 'block';
+    armazenarPontuacao();
 }
 
-function handleNextButton(){
+function handleNextButton() {
     currentQuestionIndex++;
-    if(currentQuestionIndex < question.length){
+    if (currentQuestionIndex < questions.length) {
         showQuestion();
-    }else{
+    } else {
         showScore();
     }
 }
 
-nextButton.addEventListener("click", () =>{
-    if(currentQuestionIndex < question.length){
+nextButton.addEventListener('click', () => {
+    if (currentQuestionIndex < questions.length) {
         handleNextButton();
-    }else{
+    } else {
         startQuiz();
     }
-})
+});
 
 startQuiz();
+
+function armazenarPontuacao(){
+
+    var idUsuario = sessionStorage.getItem('ID_USUARIO')
+    fetch("../quiz/registrar", {
+        method: "POST",
+        headers: {
+            "Content-Type": "appLication/json"
+        },
+        body: JSON.stringify ({
+            scoreServer : score,
+            idUsuarioServer: idUsuario 
+        })
+    }) .then(function (resposta){
+        console.log("Resposta da pontuação", resposta)
+    }) .catch(function (erro){
+        console.log("Erro", erro)
+    })
+}

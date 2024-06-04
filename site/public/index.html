@@ -74,7 +74,7 @@
                 <img class="carousel-image" src="./assets/img/server.png" alt="Imagem 2">
                 <img class="carousel-image" src="./assets/img/front.png" alt="Imagem 3">
                 <img class="carousel-image" src="./assets/img/baba.png" alt="Imagem 4">
-        
+
                 <button class="prev"> ❮ </button>
                 <button class="next"> ❯ </button>
             </div>
@@ -123,8 +123,8 @@
                     <small>Estimativa para 1 pessoa em <b id="resultado_meses">X</b> meses</small>
                     <p id="resultado_total"></p>
                     <br>
-                    <span>Para obter mais detalhes dos gastos que você pode ter
-                        mensalmente nessa e outras cidades</span>
+                    <span>Nossa plataforma pode te ajudar a se organizar financeiramente. <br>
+                        Cadastre-se e veja as formas de planejamento</span>
                     <br>
                     <button onclick="irCadastro()">Cadastre-se</button>
                 </div>
@@ -177,8 +177,11 @@
 
             </div>
             <button onclick="irCadastro()">Faça seu cadastro!</button>
-
-
+        </div>
+        <div>
+            <footer>Developed by Sophia Neves<br>
+                    
+            </footer>
         </div>
 
 </body>
@@ -218,7 +221,7 @@
             entreterimento = 200
         }
 
-        let valorTotal = alimentacao + moradia + transporte + entreterimento * periodoSelecionado.toFixed(2)
+        let valorTotal = (alimentacao + moradia + transporte + entreterimento) * periodoSelecionado.toFixed(2)
 
         resultado_nome.innerHTML = `Olá, ${nome}`
         resultado_aluguel.innerHTML = `${moradia}`

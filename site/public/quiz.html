@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="imagex/png" href="./assets/img/aba.ico">
     <link rel="stylesheet" href="./css/quiz.css">
-    <title>Your Space | Pathway</title>
-
+    <title>Your Space | PATHWAY</title>
 </head>
 
 <body>
     <nav id="nav-bar">
         <img class="logo" src="./assets/img/logo-folha.png" alt="">
-        <div class="nome">Hello, Sophia</div>
+        <div id="nomeUsuario" class="nome"></div>
         <ul>
             <li><a href="./dashboard.html" class="nav-link"> <img src="./assets/img/casa.png" alt=""></a></li>
             <li><a href="./quiz.html" class="nav-link"> <img src="./assets/img/pergunta-para-fazer-login-em-circulos.png" alt=""
@@ -29,24 +28,17 @@
             <img src="./assets/img/logo-folha.png" alt="">
             <div class="pergunta" id="question"></div>
             <div class="caixa-resposta" id="answer-buttons">
-                <div class="resposta-left">
-                    <div id="btn" class="resposta"></div>
-                    <div id="btn" class="resposta"></div>
-                </div>
-                <div class="resposta-right">
-                    <div id="btn" class="resposta"></div>
-                    <div id="btn" class="resposta"></div>
-                </div>
+                <!-- Botões das respostas serão adicionados aqui pelo JavaScript -->
             </div>
         </div>
-        <div class="passar-pergunta" id="next-btn" onclick="passar()"><img src="./assets/img/proximo-quiz.png" alt=""></div>
+        <div class="passar-pergunta" id="next-btn" style="display:none;"><img src="./assets/img/proximo-quiz.png" alt=""></div>
     </div>
+    <script src="./js/quiz.js"></script>
+    <script>
+        function irLogin() {
+            window.location.href = "./tela-login.html"
+        }
+    </script>
 </body>
-<script src="./js/quiz.js"></script>
 
 </html>
-<script>
-    function irLogin() {
-          window.location.href = "./tela-login.html"
-      }
-  </script>

@@ -1,5 +1,4 @@
 var usuarioModel = require("../models/usuarioModel");
-var aquarioModel = require("../models/aquarioModel");
 
 function autenticar(req, res) {
     var email = req.body.emailServer;
@@ -48,6 +47,7 @@ function cadastrar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var nome = req.body.nomeServer;
     var email = req.body.emailServer;
+    var cidadeEscolhida = req.body.cidadeEscolhidaServer;
     var senha = req.body.senhaServer;
 
     // Faça as validações dos valores
@@ -57,10 +57,12 @@ function cadastrar(req, res) {
         res.status(400).send("Seu email está undefined!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está undefined!");
+    } else if (cidadeEscolhida == undefined) {
+        res.status(400).send("Sua cidade está indefinida!");
     } else {
 
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, email, senha)
+        usuarioModel.cadastrar(nome, email, cidadeEscolhida, senha)
             .then(
                 function (resultado) {
                     res.json(resultado);

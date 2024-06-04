@@ -33,7 +33,7 @@ fetch("/usuarios/autenticar", {
             console.log(JSON.stringify(json));
             sessionStorage.EMAIL_USUARIO = json.email;
             sessionStorage.NOME_USUARIO = json.nome;
-            sessionStorage.ID_USUARIO = json.idUsuario;
+            sessionStorage.ID_USUARIO = json.id;
 
             setTimeout(function () {
                 window.location = "./dashboard.html";
