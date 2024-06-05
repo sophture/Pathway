@@ -159,9 +159,9 @@ function selectAnswer(e) {
 
 function showScore() {
     resetState();
-    questionElement.textContent = `Você marcou ${score} de ${questions.length}!`;
-    nextButton.textContent = 'Jogar Novamente';
-    nextButton.style.display = 'block';
+    questionElement.innerHTML = `Você marcou ${score} de ${questions.length}!<br><br>
+    <button onclick="startQuiz()" class="botao-reiniciar">Tentar Novamente!</button>`;
+    document.getElementById('next-btn').style.display="none"
     armazenarPontuacao();
 }
 

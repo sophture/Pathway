@@ -52,3 +52,7 @@ publicacao.descricao as "Conteudo"
 from publicacao join usuario
 on publicacao.fkUsuario = usuario.idUsuario
 order by idPublicacao desc;
+
+select * from usuario;
+
+truncate table publicacao;
