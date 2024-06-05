@@ -1,28 +1,5 @@
-fetch("publicacao/listar", {
-    method: "GET",
-}) .then (res => {
-    res.json()
-    .then(listaPosts =>{
-        listaPosts.forEach(publicacao =>{
-            console.log(publicacao)
-        
-            forum.innerHTML +=
-            `
-            <div>
-            <p>${publicacao.NomeUsuario}</p>
-            <br>
-            <p>${publicacao.Conteudo}</p>
-            <br>
-            <p>${publicacao.Data}</p>
-            </div>
-            `
-        })
-    }
-    )})
-
 function postar() {
     let postNovo = postText.value;
-    console.log(postNovo)
 
     if (postNovo == "") {
         alert("Insira um texto")
@@ -33,21 +10,44 @@ function postar() {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                idUsuarioServer : sessionStorage.ID_USUARIO,
-                postServer : postNovo,
+                idUsuarioServer: sessionStorage.ID_USUARIO,
+                postServer: postNovo,
             })
-        }) .then (function(req){
-            console.log("Cadastrando publicação", res)
-
-            if(resposta.ok){
+        }).then(function (resposta) {
+            if (resposta.ok) {
                 console.log("Publicação cadastrada")
+                postText.value = ""
+                listar()
             }
-        }) .catch (function(erro){
+        }).catch(function (erro) {
             console.log("Não cadastrou", erro)
         })
         
         return false;
     }
 
+}
+
+function listar() {
+    forum.innerHTML = ''
+    fetch("publicacao/listar", {
+        method: "GET",
+    }).then(res => {
+        res.json()
+            .then(listaPosts => {
+                listaPosts.forEach(publicacao => {
+                    console.log(publicacao)
+    
+                    forum.innerHTML +=
+                        `
+                    <div class="card-post">
+                    <p class="card-nome">${publicacao.NomeUsuario}</p>
+                    <p class="card-conteudo">${publicacao.Conteudo}</p>
+                    </div>
+                    `
+                })
+            }
+            )
+    })
 }
 

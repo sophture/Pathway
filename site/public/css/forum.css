@@ -98,32 +98,23 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-
-}
-
-.conteudo h1 {
-  margin: 0;
-  font-family: Chloe;
-  margin-top: 100px;
-  font-size: 50px;
-  text-align: center;
-  color: #560216;
-  position: relative;
-  bottom: 40px;
 }
 
 .box1 {
   background-color: #FEF3EA;
   width: 1000px;
-  height: 350px;
+  height: 400px;
   margin: 10px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
   border-radius: 30px;
   position: relative;
   bottom: 20px;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 80px;
+  padding-top: 5px;
 }
 
 .box1 img {
@@ -151,6 +142,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  position: relative;
+  top: 70px;
 }
 
 .box2 p {
@@ -181,7 +174,49 @@ body {
   width: 50px;
   height: 50px;
   position: relative;
-  bottom: 60px;
-  left: 480px;
+  top: 30px;
+  left: 490px;
   cursor: pointer;
 }
+
+.titulo-box1 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.posts {
+  max-width: 86%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+}
+
+.card-post {
+  background-color: #022135;
+  margin-right: 10px;
+  width: 400px;
+  height: 240px;
+  padding: 10px 20px 40px 30px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.card-post .card-nome{
+  color: #bc1823;
+  font-size: 18px;
+}
+
+.card-post .card-conteudo{
+  color: white;
+  font-size: 16px;
+  width: 180px;
+  position: relative;
+  bottom: 15px;
+}
+
+
