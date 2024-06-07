@@ -1,13 +1,9 @@
 var publicacaoModel = require("../models/publicacaoModel.js")
 
 function cadastrar(req, res) {
-    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var idUsuario = req.body.idUsuarioServer
     var post = req.body.postServer;
 
-    // Faça as validações dos valores
-
-        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
         publicacaoModel.cadastrar(idUsuario, post)
             .then(
                 function (resultado) {

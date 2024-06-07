@@ -2,71 +2,85 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="imagex/png" href="./assets/img/aba.ico">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="./css/dashboard.css">
-    <title>Your Space | Pathway</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="imagex/png" href="./assets/img/aba.ico">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="./css/dashboard.css">
+  <title>Your Space | Pathway</title>
 
 </head>
 
-<body>
-    <nav id="nav-bar">
-      <img class="logo" src="./assets/img/logo-folha.png" alt="">
-      <div id="nomeUsuario" class="nome"></div>
-        <ul>
-          <li><a href="./dashboard.html" class="nav-link"> <img src="./assets/img/casa.png" alt=""></a></li>
-            <li><a href="./quiz.html" class="nav-link"> <img src="./assets/img/pergunta-para-fazer-login-em-circulos.png" alt=""
-                        srcset=""></a></li>
-            <li><a href="./forum.html" class="nav-link"> <img src="./assets/img/avaliacao.png" alt=""></a></li>
-        </ul>
-          <span>See you!</span>
-          <img class="botao" src="./assets/img/calcular.png" alt="" onclick="irLogin()">
-      </nav>
-      <div class="conteudo">
-        <div class="dash-quiz">
-          <div class="box">
-            <h1>Ranking</h1>
-            <img class="img-indicadores" src="./assets/img/logo-folha.png" alt="">
-            <div class="campos-ranking">
-              <div class="linhas-ranking">
-                <div class="posicao"> 1° </div><div class="nome" id="posicao1"></div>
-              </div>
-              <div class="linhas-ranking">
-                <div class="posicao"> 2° </div><div class="nome" id="posicao2"></div>
-              </div>
-              <div class="linhas-ranking">
-                <div class="posicao"> 3° </div><div class="nome" id="posicao1"></div>
-              </div>
-              <div class="linhas-ranking">
-                <div class="posicao"> 4° </div><div class="nome" id="posicao1"></div>
-              </div>
-              <div class="linhas-ranking">
-                <div class="posicao"> 5° </div><div class="nome" id="posicao1"></div>
-              </div>
+<body onload="carregarPagina()">
+  <nav id="nav-bar">
+    <img class="logo" src="./assets/img/logo-folha.png" alt="">
+    <div id="nomeUsuario" class="nome"></div>
+    <ul>
+      <li><a href="./dashboard.html" class="nav-link"> <img src="./assets/img/casa.png" alt=""></a></li>
+      <li><a href="./quiz.html" class="nav-link"> <img src="./assets/img/pergunta-para-fazer-login-em-circulos.png"
+            alt="" srcset=""></a></li>
+      <li><a href="./forum.html" class="nav-link"> <img src="./assets/img/avaliacao.png" alt=""></a></li>
+    </ul>
+    <span>See you!</span>
+    <img class="botao" src="./assets/img/calcular.png" alt="" onclick="irLogin()">
+  </nav>
+  <div class="conteudo">
+    <div class="dash-quiz">
+      <div class="box">
+        <h1>Ranking</h1>
+        <img class="img-indicadores" src="./assets/img/logo-folha.png" alt="">
+        <div class="campos-ranking">
+          <div class="linhas-ranking">
+            <div class="posicao"> 1° </div>
+            <div class="nome" id="posicao1">
             </div>
+          <div class="pontuacao" id="pontuacao1"></div>
           </div>
-          <div class="box2">
-            <canvas id="grafico"></canvas>
-        </div>
-        </div>
-        <div class="indicadores">
-          <p>Cidades mais escolhidas</p>
-          <img class="img-indicadores" src="./assets/img/logo-folha.png" alt="">
-          <span class="cidade-ind">Toronto</span>
-          <span class="num-ind">12</span>
-          <span class="cidade-ind">Vancouver</span>
-          <span class="num-ind">12</span>
-          <span class="cidade-ind">Montreal</span>
-          <span class="num-ind">12</span>
-          <span class="cidade-ind">Quebéc</span>
-          <span class="num-ind">12</span>
+          <div class="linhas-ranking">
+            <div class="posicao"> 2° </div>
+            <div class="nome" id="posicao2">
+            </div>
+          <div class="pontuacao" id="pontuacao2"></div>
+          </div>
+          <div class="linhas-ranking">
+            <div class="posicao"> 3° </div>
+            <div class="nome" id="posicao3">
+            </div>
+          <div class="pontuacao" id="pontuacao3"></div>
+          </div>
+          <div class="linhas-ranking">
+            <div class="posicao"> 4° </div>
+            <div class="nome" id="posicao4">
+            </div>
+          <div class="pontuacao" id="pontuacao4"></div>
+          </div>
+          <div class="linhas-ranking">
+            <div class="posicao"> 5° </div>
+            <div class="nome" id="posicao5">
+            </div>
+          <div class="pontuacao" id="pontuacao5"></div>
+          </div>
         </div>
       </div>
+      <div class="box2">
+        <canvas id="grafico"></canvas>
+      </div>
+    </div>
+    <div class="indicadores">
+      <p>Cidades mais escolhidas</p>
+      <img class="img-indicadores" src="./assets/img/logo-folha.png" alt="">
+      <span class="cidade-ind">Toronto</span>
+      <span class="num-ind" id="indicador_toronto">12</span>
+      <span class="cidade-ind">Vancouver</span>
+      <span class="num-ind" id="indicador_vancouver">12</span>
+      <span class="cidade-ind">Montreal</span>
+      <span class="num-ind" id="indicador_montreal">12</span>
+      <span class="cidade-ind">Quebéc</span>
+      <span class="num-ind" id="indicador_quebec">12</span>
+    </div>
+  </div>
 </body>
 
 </html>
 
 <script src="./js/dashboard.js"></script>
-

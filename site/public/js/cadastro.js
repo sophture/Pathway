@@ -34,7 +34,7 @@ function cadastrar() {
       </div>`
       setTimeout(function (){
         mensagem_erro.removeAttribute('open')
-      }, 2000)
+      }, 3000)
     return
 
   } else {
@@ -126,7 +126,7 @@ function cadastrar() {
       </div>
       `
       setTimeout(function(){
-        window.location = "../tela-login.html";}, 4000)
+        window.location = "../tela-login.html";}, 3000)
 
       })
       .catch(function (resposta) {

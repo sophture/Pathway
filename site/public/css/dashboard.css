@@ -136,13 +136,12 @@ body {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  margin-right: 40px;
   position: relative;
   bottom: 20px;
 }
 
 .linhas-ranking {
-  width: 300px;
+  width: 400px;
   height: 52px;
   display: flex;
   flex-direction: row;
@@ -170,7 +169,7 @@ body {
 .campos-ranking .nome {
   width: 250px;
   height: 35px;
-  background-color: #022135;
+  background-color: #022135cc;
   border-radius: 30px;
   color: #FEF3EA;
   display: flex;
@@ -178,8 +177,24 @@ body {
   align-items: center;
   font-family: 'Baloo 2';
   font-weight: 600;
-
 }
+
+.pontuacao {
+  width: 50px;
+  height: 35px;
+  position: relative;
+  right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #022135;
+  border-radius: 40px;
+  font-family: 'Baloo 2';
+}
+
 .box2 {
   display: flex;
   justify-content: center;

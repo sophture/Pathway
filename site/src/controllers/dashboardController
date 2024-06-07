@@ -13,6 +13,34 @@ function capturarPontos(req, res) {
         })
 }
 
+function listarCidades(req, res) {
+
+    dashboardModel.listarCidades()
+        .then(function (cidades) {
+            if (cidades.length > 0) {
+                res.status(200).json(cidades);
+            } else {
+                res.status(204).send("Nenhum resultado encontrado!")
+            }
+        })
+}
+
+function ranking(req, res) {
+
+    dashboardModel.ranking()
+        .then(function (resultadoRanking) {
+            if (resultadoRanking.length > 0) {
+                res.status(200).json(resultadoRanking);
+            } else {
+                res.status(204).send("Nenhum resultado encontrado!")
+            }
+        })
+}
+
+
+
 module.exports = {
-    capturarPontos
+    capturarPontos,
+    listarCidades,
+    ranking
 }
