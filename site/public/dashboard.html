@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="imagex/png" href="./assets/img/aba.ico">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="./css/dashboard.css">
     <title>Your Space | Pathway</title>
 
@@ -24,9 +25,31 @@
           <img class="botao" src="./assets/img/calcular.png" alt="" onclick="irLogin()">
       </nav>
       <div class="conteudo">
-        <div class="box">
-          <h1>Custo de Vida</h1>
-          <img class="img-indicadores" src="./assets/img/logo-folha.png" alt="">
+        <div class="dash-quiz">
+          <div class="box">
+            <h1>Ranking</h1>
+            <img class="img-indicadores" src="./assets/img/logo-folha.png" alt="">
+            <div class="campos-ranking">
+              <div class="linhas-ranking">
+                <div class="posicao"> 1° </div><div class="nome" id="posicao1"></div>
+              </div>
+              <div class="linhas-ranking">
+                <div class="posicao"> 2° </div><div class="nome" id="posicao2"></div>
+              </div>
+              <div class="linhas-ranking">
+                <div class="posicao"> 3° </div><div class="nome" id="posicao1"></div>
+              </div>
+              <div class="linhas-ranking">
+                <div class="posicao"> 4° </div><div class="nome" id="posicao1"></div>
+              </div>
+              <div class="linhas-ranking">
+                <div class="posicao"> 5° </div><div class="nome" id="posicao1"></div>
+              </div>
+            </div>
+          </div>
+          <div class="box2">
+            <canvas id="grafico"></canvas>
+        </div>
         </div>
         <div class="indicadores">
           <p>Cidades mais escolhidas</p>
@@ -45,10 +68,5 @@
 
 </html>
 
-<script>
-  function irLogin() {
-        window.location.href = "./tela-login.html"
-    }
+<script src="./js/dashboard.js"></script>
 
-    nomeUsuario.innerHTML = `Hello, ${sessionStorage.NOME_USUARIO}`
-</script>

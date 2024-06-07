@@ -28,6 +28,7 @@ pontuacao int,
 dtFinalizado datetime
 );
 
+
 create table publicacao (
 idPublicacao int auto_increment,
 fkUsuario int,

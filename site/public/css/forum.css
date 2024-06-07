@@ -6,6 +6,12 @@
   src: url('./fonte/Chloe-Regular.otf');
 }
 
+.patua-one-regular {
+  font-family: "Patua One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   background-color: #dde9f1;
 }
@@ -209,6 +215,7 @@ body {
 .card-post .card-nome{
   color: #bc1823;
   font-size: 18px;
+  font-family: "Patua One", serif;
 }
 
 .card-post .card-conteudo{

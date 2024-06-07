@@ -105,19 +105,23 @@ body {
   align-items: center;
 }
 
+.dash-quiz {
+  display: flex;
+  flex-direction: column;
+}
+
 .box {
   background-color: #FEF3EA;
-  width: 900px;
-  height: 480px;
+  width: 800px;
+  height: 350px;
   border-radius: 30px;
-  margin-top: 20px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   margin: auto;
-  position: relative;
-  top: 90px;
+  margin-top: 15px;
 }
 
 .box h1 {
@@ -125,20 +129,76 @@ body {
   font-family: "Patua One", serif;
   font-size: 25px;
   text-align: center;
+}
+
+.campos-ranking {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 40px;
   position: relative;
-  bottom: 5px;
+  bottom: 20px;
+}
+
+.linhas-ranking {
+  width: 300px;
+  height: 52px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.posicao {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: #bc1823;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Baloo 2';
+  color: #FEF3EA;
+  font-weight: 600;
+  font-size: 25px;
+  position: relative;
+  left: 30px;
+  
+}
+
+.campos-ranking .nome {
+  width: 250px;
+  height: 35px;
+  background-color: #022135;
+  border-radius: 30px;
+  color: #FEF3EA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Baloo 2';
+  font-weight: 600;
+
+}
+.box2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FEF3EA;
+  width: 800px;
+  height: 300px;
+  border-radius: 30px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  margin-top: 10px;
 }
 
 .indicadores {
   background-color: #022135;
   width: 200px;
-  height: 600px;
+  height: 610px;
   border-radius: 30px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
-  position: relative;
-  margin: 20px;
-  top: 35px;
-  right: 120px;
+  margin-left: 20px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -156,7 +216,7 @@ body {
   width: 30px;
   height: 30px;
   position: relative;
-  bottom: 28px;
+  bottom: 18px;
 }
 
 .cidade-ind {
