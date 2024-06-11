@@ -93,7 +93,18 @@ body {
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  animation: go-back 1s;
 }
+
+@keyframes go-back {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 
 .conteudo {
   max-height: 695px;
@@ -163,7 +174,7 @@ body {
   font-size: 25px;
   position: relative;
   left: 30px;
-  
+
 }
 
 .campos-ranking .nome {

@@ -73,9 +73,9 @@ const questions = [
         question: "Quantos habitantes aproximadamente tem o Canadá?",
         answers: [
 
-            { text: "29,76 milhões", correct: false },
+            { text: "29,7 milhões", correct: false },
             { text: "30,9 milhões", correct: false },
-            { text: "38,93 milhões", correct: true },
+            { text: "38,9 milhões", correct: true },
             { text: "40,7 milhões", correct: false }
         ]
     },
@@ -149,9 +149,9 @@ function selectAnswer(e) {
         selectedBtn.classList.add("incorrect");
     }
     Array.from(answerButtons.children).forEach(button => {
-        if (button.dataset.correct === "true") {
-            button.classList.add("correct");
-        }
+        // if (button.dataset.correct === "true") {
+        //     button.classList.add("correct");
+        // }
         button.disabled = true;
     });
     nextButton.style.display = 'block';
@@ -159,7 +159,9 @@ function selectAnswer(e) {
 
 function showScore() {
     resetState();
-    questionElement.innerHTML = `Você marcou ${score} de ${questions.length}!<br><br>
+    questionElement.innerHTML = `
+    Você marcou ${score} de ${questions.length}!
+    <br><br>
     <button onclick="startQuiz()" class="botao-reiniciar">Tentar Novamente!</button>`;
     document.getElementById('next-btn').style.display="none"
     armazenarPontuacao();

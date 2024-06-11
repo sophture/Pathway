@@ -1,5 +1,3 @@
-// scripts.js
-
 document.addEventListener('DOMContentLoaded', () => {
     const images = document.querySelectorAll('.carousel-image');
     const prevButton = document.querySelector('.prev');
@@ -26,6 +24,5 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCarousel();
     });
 
-    // Initialize carousel
     updateCarousel();
 });

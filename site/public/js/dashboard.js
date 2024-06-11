@@ -16,7 +16,7 @@ const grafico = new Chart(ctx, {
     data: {
         labels: [],
         datasets: [{
-            label: 'Ultimas pontuações',
+            label: 'Últimas pontuações',
             data: [],
             borderWidth: 3,
             borderColor: '#bc1823'
@@ -83,22 +83,36 @@ function ranking() {
         .then(function (resultado) {
             if (resultado.ok) {
                 resultado.json().then(function (resultado) {
-                    posicao1.innerHTML = resultado[0].nome;
-                    posicao2.innerHTML = resultado[1].nome;
-                    posicao3.innerHTML = resultado[2].nome;
-                    posicao4.innerHTML = resultado[3].nome;
-                    posicao5.innerHTML = resultado[4].nome;
-                    pontuacao1.innerHTML = resultado[0].pontos;
-                    pontuacao2.innerHTML = resultado[1].pontos;
-                    pontuacao3.innerHTML = resultado[2].pontos;
-                    pontuacao4.innerHTML = resultado[3].pontos;
-                    pontuacao5.innerHTML = resultado[4].pontos;
+                    for (let posicao = 0;
+                        posicao < resultado.length;
+                        posicao++) {
+                        if (posicao == 0) {
+                            posicao1.innerHTML = resultado[posicao].nome;
+                            pontuacao1.innerHTML = resultado[posicao].pontos;
+                        }
+                        if (posicao == 1) {
+                            posicao2.innerHTML = resultado[posicao].nome;
+                            pontuacao2.innerHTML = resultado[posicao].pontos;
+                        }
+                        if (posicao == 2) {
+                            posicao3.innerHTML = resultado[posicao].nome;
+                            pontuacao3.innerHTML = resultado[posicao].pontos;
+                        }
+                        if (posicao == 3) {
+                            posicao4.innerHTML = resultado[posicao].nome;
+                            pontuacao4.innerHTML = resultado[posicao].pontos;
+                        }
+                        if (posicao == 4) {
+                            posicao5.innerHTML = resultado[posicao].nome;
+                            pontuacao5.innerHTML = resultado[posicao].pontos;
+                        }
+                    }
                 })
             }
         })
 }
 
 function carregarPagina() {
-    listarCidades()
-    ranking()
+    listarCidades();
+    ranking();
 }

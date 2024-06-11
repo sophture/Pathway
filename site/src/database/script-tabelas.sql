@@ -1,14 +1,9 @@
 create database pathway;
-
 use pathway;
 
 create table cidadeEscolhida (
 idCidade int primary key auto_increment,
-nome varchar(20),
-aluguel decimal (5,2),
-alimentacao decimal(5,2),
-transporte int,
-entretenimento decimal (5,2)
+nome varchar(20)
 );
 
 create table usuario (
@@ -17,7 +12,7 @@ nome varchar(50),
 email varchar(45) unique,
 fkCidadeEscolhida int,
 foreign key (fkCidadeEscolhida) references cidadeEscolhida(idCidade),
-senha varchar(10)
+senha varchar(45)
 );
 
 create table quiz (
@@ -27,7 +22,6 @@ foreign key (fkUsuario) references usuario(idUsuario),
 pontuacao int,
 dtFinalizado datetime
 );
-
 
 create table publicacao (
 idPublicacao int auto_increment,
@@ -42,6 +36,12 @@ select * from usuario;
 select * from publicacao;
 select * from quiz;
 
+select nome, sum(pontuacao) as pontos
+From quiz join usuario 
+on usuario.idusuario = quiz.fkusuario 
+group by fkUsuario
+order by pontos desc;
+
 insert into cidadeEscolhida (idCidade, nome) values 
 (1, 'Toronto'),
 (2, 'Vancouver'),
@@ -54,6 +54,16 @@ from publicacao join usuario
 on publicacao.fkUsuario = usuario.idUsuario
 order by idPublicacao desc;
 
-select * from usuario;
+select idQuiz, pontuacao, dtFinalizado from quiz 
+where fkUsuario = 2
+order by idQuiz desc limit 5;
 
-truncate table publicacao;
+select cidadeEscolhida.nome,
+count(fkCidadeEscolhida) as 'Quantidade'
+from cidadeEscolhida join usuario
+on usuario.fkCidadeEscolhida = cidadeEscolhida.idCidade
+group by fkCidadeEscolhida;
+
+
+
+
